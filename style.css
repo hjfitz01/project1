@@ -165,7 +165,7 @@ div.nav {
 .subtopics{
     color:#211c51;
     display: flex;
-    transition: max-height 1s;
+    transition: max-height .5s;
     overflow: hidden;
     max-height: 1500px;
      justify-content: space-around;
@@ -175,7 +175,6 @@ div.nav {
     cursor: pointer;
 }
 
-.closed {
+.subtopics.closed {
     max-height:0;
-    
 }
