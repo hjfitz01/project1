@@ -1,4 +1,10 @@
-$("#commbutton").click(function () {
-    $("#links").toggle();
+
+
+
+$(document).ready(function(){
+    $(".topic-button").click(function (){
+        $(".subtopics").toggleClass("closed");
+    });
 });
+
 
