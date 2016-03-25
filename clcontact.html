@@ -1,9 +1,82 @@
 <!DOCTYPE html>
 <html>
 <head>
+        <link href="style.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js">
+    </script>
+    <style>
+    </style>
+    <meta charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Hind:400,700,600' rel='stylesheet' type='text/css'>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Craigslist Contact</title>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+    <script src="app.js"></script>
+    <script src="controllers.js"></script>
 </head>
-<body>
-    <footer>
+<body ng-app="contactApp" >
+    <a href="index.html" >  <button class="backhome">Home</button> </a>
+    <div class="vertical-middle">
+        <div class="container">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2 class="panel-title"> Contact Us Today!</h2>
+                </div>
+                <div ng-controller="ContactController" class="panel-body">
+                    <form ng-submit="submit(contactform)" name="contactform" method="post" action="" class="form-horizontal" role="form">
+                        <div class="form-group" ng-class="{ 'has-error': contactform.inputName.$invalid && submitted }">
+                            <label for="inputName" class="col-lg-2 control-label">Name</label>
+                            <div class="col-lg-10">
+                                <input ng-model="formData.inputName" type="text" class="form-control" id="inputName" name="inputName" placeholder="Your Name" required>
+                            </div>
+                        </div>
+                        <div class="form-group" ng-class="{ 'has-error': contactform.inputEmail.$invalid && submitted }">
+                            <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                            <div class="col-lg-10">
+                                <input ng-model="formData.inputEmail" type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="form-group" ng-class="{ 'has-error': contactform.inputSubject.$invalid && submitted }">
+                            <label for="inputSubject" class="col-lg-2 control-label">Subject</label>
+                            <div class="col-lg-10">
+                                <input ng-model="formData.inputSubject" type="text" class="form-control" id="inputSubject" name="inputSubject" placeholder="Subject Message" required>
+                            </div>
+                        </div>
+                        <div class="form-group" ng-class="{ 'has-error': contactform.inputMessage.$invalid && submitted }">
+                            <label for="inputMessage" class="col-lg-2 control-label">Message</label>
+                            <div class="col-lg-10">
+                                <textarea ng-model="formData.inputMessage" class="form-control" rows="4" id="inputMessage" name="inputMessage" placeholder="Your message..." required></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-lg-offset-2 col-lg-10">
+                                <button type="submit" class="btn btn-default" ng-disabled="submitButtonDisabled">
+                                    Send Message
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <p ng-class="result" style="padding: 15px; margin: 0;"></p>
+                    <footer class="footer">
+        <div class="footer-links">
+            <a href="help.html">Help</a> <a href="terms.html">Terms</a> <a href=
+            "mobile.html">Mobile</a> <a href="clhome.html">About</a> <a href=
+            "safety.html">Safety</a> <a href="privacy.html">Privacy</a> <a href=
+            "jobs.html">Jobs</a> <a href="clcontact.html">Contact</a>
+        </div>
+        <div class="copyright">
+            Copyright &#169; 2016 Craigslist
+        </div>
     </footer>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
+

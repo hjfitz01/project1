@@ -22,12 +22,13 @@ max-width: 250px;
     background-color: #211c51;
     color: white;
     height: 40px;
-    width: 205px;
+    width: 275px;
     border-radius: 15px;
     margin-bottom: 10px;
     border: solid 3px #384a9f;
     font-size: 13px;
     font-weight: 300;
+     margin-right: 7px;
 }
 
 .topic-button:hover{
@@ -40,11 +41,11 @@ max-width: 250px;
 /*Top Nav*/
 
 .settings {
-width: 90%;
-clear: both;
-margin:15px 15px 0;
-display:flex;
-justify-content: flex-end;
+    width: 90%;
+    clear: both;
+    margin:15px 15px 0;
+    display:flex;
+    justify-content: flex-end;
 }
 
 .settings li {
@@ -64,14 +65,15 @@ li.last{
     border-bottom-right-radius:15px;
 }
 .settings li a {
-text-decoration:none;
-padding:7px 0;
-width:100px;
-background-color:white;
-color:navy;
-float:left;
-text-align:center;
-font-weight: bold;
+    text-decoration:none;
+    padding:7px 0;
+    width:15vw;
+    max-width: 100px;
+    background-color:white;
+    color:navy;
+    float:left;
+    text-align:center;
+    font-weight: bold;
 
 
 }
@@ -84,13 +86,17 @@ background-color:rgba(0, 0, 255, 0.2);
 .meat {
     display: flex;
 }
+.nav-container{
+    margin-right: 20px;
+    z-index: 10;
+    transition: right 0.3s; 
+}
 
 .nav {
     background: #f47b24;
     border-radius: 15px;
     padding: 15px;
     border: 3px solid #f7924d;
-    margin-right: 20px;
     color:white;
   
 }
@@ -113,8 +119,17 @@ background-color:rgba(0, 0, 255, 0.2);
    
     
 }
+
+.nav-btn{
+    display: none;
+    
+}
+
 div.nav {
     display: inline-table;
+}
+div p {
+    margin: 2px 0;
 }
     /* Nav*/
     
@@ -134,8 +149,9 @@ div.nav {
 
 .footer-links{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     padding: 20px 0;
+    flex-wrap:wrap;
 }
 
 .footer-links a {
@@ -143,16 +159,11 @@ div.nav {
     text-decoration: none;
     font-weight: bold;
     font-size: .7em;
-    
-    
-    
+    padding: 0 10px 5px;
 }
 
 .footer-links a:hover{
     color:#384a9f;
- 
-    
-    
 }
 
 .copyright{
@@ -165,7 +176,7 @@ div.nav {
 .subtopics{
     color:#211c51;
     display: flex;
-    transition: max-height .5s;
+    transition: max-height .7s;
     overflow: hidden;
     max-height: 1500px;
      justify-content: space-around;
@@ -178,3 +189,137 @@ div.nav {
 .subtopics.closed {
     max-height:0;
 }
+
+/*contact page css*/
+.input-group[class*="col-"] {
+    padding-right: 15px;
+    padding-left: 15px;
+    }
+
+
+.backhome{
+    color:white;
+    vertical-align: middle;
+    background-color: #f47b24;
+    text-align: center;
+    height: 40px;
+    width: 275px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    border: solid 3px #f7924d;
+    font-family: Hind, sans-serif;
+    font-size: 15px;
+
+}
+ 
+.backhome a {
+    color:white;
+    text-decoration: none;
+
+    
+}
+
+.backhome:hover{
+    color:#f9ba8f;
+    font-weight: 300;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+/*events css*/
+
+.pages span{
+    margin:7px;
+    color:white;
+    background-color: #211c51;
+    border-radius: 20px;
+    padding: 0 20px;
+    cursor:pointer;
+    border: 2px solid #384a9f;
+    
+}
+.pages{
+    margin:10px;
+    
+    
+}
+
+.event-date{
+    padding-right: 10px;
+    font-weight: bold;
+    
+}
+/*media queries*/
+@media screen and (max-width: 800px){
+    .clippings{
+        flex-wrap: wrap;
+        
+    }
+    .settings{
+        margin: 0 auto;
+        
+    }
+}
+
+@media screen and (max-width: 450px){
+    .clippings{
+        flex-wrap: wrap;
+        
+    }
+    
+    .logo{
+        margin: 0 auto;
+    }
+    
+    /*inspired by https://github.com/benwiley4000/dsn-zine-resistance/blob/master/src/css/main.css#L130 */
+    .nav-container{
+        position: fixed;
+        z-index: 10;
+        left: -93px;
+        transition: left 0.3s;
+        top:0;
+
+    } 
+    
+    .nav{
+        float:left;
+        border-radius: initial;
+        height: 100vh;
+    }
+    
+    .nav-btn{
+        float: left;
+        display: initial;
+        font-size: 35px;
+        padding: 0 13px;
+        color: #f7924d;
+        background-color: #fff;
+        border-radius: 0px 20px 20px 5px;
+        border: 2px solid #f7924d;
+
+    }
+    
+    .nav-btn::after{
+        content: '\2630';
+        
+    }
+    .nav-container.open {
+        left: 0;
+    }
+
+    .contents-menu-icon {
+        color: #fff;
+        background-color: #333;
+        float: left;
+        font-size: 30px;
+        padding: 0 7px;
+        cursor: pointer;
+    }
+
+    .contents-menu-icon::after {
+        content: '\2630';
+    }
+
+}
+ 
