@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <link href="style.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js">
+    </script>
+    <style>
+    </style>
+    <meta charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Hind:400,700,600' rel='stylesheet' type='text/css'>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+</head>
+<body>
+    <a href="index.html" >  <button class="backhome">Home</button> </a>
+    <div>    Want to learn more about Craigslist? Check out the links below</div>
+    <div id="articles">  
+    </div>
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="help.html">Help</a> <a href="terms.html">Terms</a> <a href=
+            "mobile.html">Mobile</a> <a href="clhome.html">About</a> <a href=
+            "safety.html">Safety</a> <a href="privacy.html">Privacy</a> <a href=
+            "jobs.html">Jobs</a> <a href="clcontact.html">Contact</a>
+        </div>
+        <div class="copyright">
+            Copyright &#169; 2016 Craigslist
+        </div>
+    </footer>
+    
+    <script>
+        //http://stackoverflow.com/q/32133078
+        $.ajax({
+            'type': 'GET',
+            'url': 'https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=Craigslist&prop=revisions&utf8=&format=json&callback=?',
+            'dataType': 'json',
+            'callback': '',
+
+            'success': function(data, textStats, XMLHttpRequest) {
+                // passed function object for data processing
+                var $articles= $('#articles');
+                data.query.search.forEach(function (doc) {
+                    console.log(doc);
+                    var html=
+                        '<div class="article">' +
+                            '<a href="https://en.wikipedia.org/wiki/'+doc.title+'" target="_blank">' +
+                            '<h3>'+doc.title+'</h3></a>' +
+                            '<p>'+doc.snippet+'</p>' +
+                            '<p>'+new Date(doc.timestamp).toLocaleDateString()+'</p>' +
+                        '</div>';
+                    $articles.append(html);
+                });
+            }
+        });
+  </script>
+</body>
+</html>
+
+<!--
+Application: c-list 
+Key: 0f33730a490b2ddff53abafd4f6e3a79:8:74759701 
+Status: active

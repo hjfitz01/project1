@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="style.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js">
+    </script>
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <style>
+    </style>
+    <meta charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Hind:400,700,600' rel='stylesheet' type='text/css'>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Craigslist</title>
+</head>
+<body>
+    
+    <header>
+        <ul id="settings" class="settings">
+            <li class="first">
+                <a href="#">State</a>
+            </li>
+            <li>
+                <a href="#">City</a>
+            </li>
+            <li>
+                <a href="#">Login</a>
+            </li>
+            <li class="last">
+                <a href="#">English</a>
+            </li>
+        </ul>
+       <div class="logo"> <img src="Craigslist-logo.svg"></div>
+    </header>
+    <main>
+        <div class="meat">
+            <div class="nav-container">
+                <div class="nav">
+                    <ul>
+                        <li class="about">
+                            <a href="clhome.html">About</a>
+                        </li>
+                        <li class="events">
+                            <a class="clevents" href="clevents.html">Events</a>
+                        </li>
+                        <li class="blog">
+                            <a href="http://blog.craigslist.org/" target="_blank">Blog</a>
+                        </li>
+                        <li class="contact">
+                            <a href="clcontact.html">Contact</a>
+                            <div>
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-btn"></div>
+            </div>
+            <div class="clippings">
+               <div class="clippings-col">
+                    <div class="topic">
+                        <button class="topic-button">Community</button>
+                        <div class="subtopics closed">
+                         <div><p>Activities</p>
+                           <p>Artists</p>
+                           <p>Childcare</p>
+                           <p>Classes</p>
+                           <p>Events</p>
+                           <p>General</p>
+                           <p>Groups</p></div>
+                           <div>
+                           <p>Local News</p>
+                           <p>Lost+Found</p>
+                           <p>Musicians</p>
+                           <p>Pets</p>
+                           <p>Politics</p>
+                           <p>Rideshare</p>
+                           <p>Volunteers</p></div> 
+                        </div>
+                    </div>
+                   
+                    <div class="topic">
+                        <button class="topic-button">Jobs</button>
+                        <div class="subtopics closed">
+                            <div>
+                           <p>Account/Financing</p>
+                           <p>Admin/Office</p>
+                           <p>Arch/Engineering</p>
+                           <p>Art/Media/Design</p>
+                           <p>Biotech/Science</p>
+                           <p>Business/Mgmt</p>
+                           <p>Customer Service</p>
+                           <p>Education</p>
+                           <p>Food/Bev/Hosp</p>
+                           <p>General Labor</p>
+                           <p>Government</p>
+                           <p>Human Resources</p>
+                           <p>Internet Engineers</p>
+                           <p>Legal/Paralegal</p>
+                           <p>Manufacturing</p>
+                           <p>Marketing/PR</p>     
+                           <p>Medical/Health</p>
+                                </div><div>
+                           <p>Nonprofit</p>
+                           <p>Real Estate</p>
+                           <p>Retail/Wholesale</p>
+                           <p>Sales/Biz Dev</p>
+                           <p>Salon/Spa/Fitness</p>
+                           <p>Security</p>
+                           <p>Skilled Trade/Craft</p>
+                           <p>Software/QA/DBA</p>
+                           <p>Systems/Networl</p>
+                           <p>Tech Support</p>
+                           <p>Transport</p>
+                           <p>TV/Film/Video</p>
+                           <p>Web/Info Design</p>
+                           <p>Writing/Editing</p>
+                           <p>"[ETC]"</p>
+                           <p>Part-Time</p>
+                        </div>
+                    </div>
+                                       </div>
+
+                    <div class="topic">
+                        <button class="topic-button">Services</button>
+                        <div class="subtopics closed">
+                             <div>
+                           <p>Automotive</p>
+                           <p>Beauty</p>
+                           <p>Computer</p>
+                           <p>Creative</p>
+                           <p>Cycle</p>
+                           <p>Event</p>
+                           <p>Farm+Garden</p>
+                           <p>Financial</p>
+                           <p>Household</p>
+                           <p>Labor/Move</p>
+                                 </div><div>
+                           <p>Legal</p>
+                           <p>Lessons</p>
+                           <p>Marine</p>
+                           <p>Pet</p>
+                           <p>Real Estate</p>
+                           <p>Skill'd Trade</p>     
+                           <p>Sm Biz Ads</p>
+                           <p>Therapeutic</p>
+                           <p>Travel/Vaca</p>
+                           <p>Write/Ed/Tr8</p>
+                                </div>
+                        </div>
+                    </div>
+                   
+                    <div class="topic">
+                        <button class="topic-button">Discussion Forums</button>
+                        <div class="subtopics closed">
+                                <div>
+                           <p>Apple</p>
+                           <p>Arts</p>
+                           <p>Athiest</p>
+                           <p>Autos</p>
+                           <p>Beauty</p>
+                           <p>Bikes</p>
+                           <p>Celebs</p>
+                           <p>Comp</p>
+                           <p>Crafts</p>
+                           <p>Diet</p>
+                           <p>Divorce</p>
+                           <p>Dying</p>
+                           <p>Eco</p>
+                           <p>Educ</p>
+                           <p>Feedback</p>
+                           <p>Film</p>     
+                           <p>Fitness</p>
+                           <p>Fixit</p>
+                           <p>Food</p>
+                           <p>Frugal</p>
+                            <p>Gaming</p>
+                           <p>Garden</p>
+                           <p>Haiku</p>
+                                </div>
+                                   <div>
+                           <p>Help</p>
+                           <p>History</p>
+                           <p>Housing</p>
+                           <p>Jobs</p>
+                           <p>Jokes</p>
+                           <p>Kink</p>
+                           <p>Legal</p>
+                           <p>Linux</p>
+                           <p>m4m</p>
+                           <p>Manners</p>
+                           <p>Marriage</p>
+                           <p>Media</p>
+                           <p>Money</p>
+                           <p>Moto</p>
+                           <p>Music</p>
+                           <p>Nonprofit</p>     
+                           <p>Open</p>
+                           <p>Outdoor</p>
+                           <p>Over 50</p>
+                           <p>Parent</p>
+                            <p>Pets</p>
+                           <p>Philos</p>
+                                </div>
+                            <div>
+                           <p>Photo</p>
+                           <p>P.O.C</p>
+                           <p>Politics</p>
+                           <p>Psych</p>
+                           <p>Queer</p>
+                           <p>Recover</p>
+                           <p>Religion</p>
+                           <p>Romance</p>
+                           <p>Science</p>
+                           <p>Spirit</p>
+                           <p>Sports</p>
+                           <p>Tax</p>
+                           <p>Travel</p>
+                           <p>TV</p>
+                           <p>Vegan</p>
+                           <p>w4w</p>     
+                           <p>Wed</p>
+                           <p>Wine</p>
+                           <p>Women</p>
+                           <p>Words</p>
+                            <p>Writing</p>
+                           <p>Yoga</p>
+                                </div>
+                        </div>
+                    </div>
+                   
+                    <div class="topic">
+                        <button class="topic-button">R&eacute;sum&eacute; Upload</button>
+                        <div class="subtopics closed">
+                      
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="clippings-col">
+                    <div class="topic">
+                        <button class="topic-button">Housing</button>
+                        <div class="subtopics closed">
+                          <div>
+                           <p>Apts/Housing</p>
+                           <p>Housing Swap</p>
+                           <p>Housing Wanted</p>
+                           <p>Office/Commercial</p>
+                           <p>Parking/Storage</p>
+                           <p>Real Estate Sale</p>     
+                           <p>Rooms/Shared</p>
+                           <p>Rooms Wanted</p>
+                           <p>Sublets/Temp</p>
+                           <p>Vacation Rentals</p>
+                                </div>  
+                        </div>
+                    </div>
+                   
+                    <div class="topic">
+                        <button class="topic-button">For Sale</button>
+                        <div class="subtopics closed">
+                           <div>
+                           <p>Antiques</p>
+                           <p>Appliances</p>
+                           <p>Arts+Crafts</p>
+                           <p>ATV/UTV/SNO</p>
+                           <p>Auto Parts</p>
+                           <p>Baby+Kid</p>     
+                           <p>Barter</p>
+                           <p>Beauty+Hlth</p>
+                           <p>Bikes</p>
+                           <p>Boats</p>
+                           <p>Books</p>
+                           <p>Business</p>
+                           <p>Cars+Trucks</p>
+                           <p>CDs/DVDs/VHS</p>
+                           <p>Cell Phones</p>
+                           <p>Cloths+Acc</p>     
+                           <p>Colectables</p>
+                           <p>Computers</p>
+                           <p>Electronics</p>
+                                </div>
+                            <div>
+                           <p>Farm+Garden</p>
+                           <p>Free</p>
+                           <p>Furniture</p>
+                           <p>Garage Sale</p>
+                           <p>General</p>
+                           <p>Heavy Equip</p>     
+                           <p>Household</p>
+                           <p>Jewelry</p>
+                           <p>Materials</p>
+                           <p>Motorcycles</p>
+                           <p>Music Inst</p>
+                           <p>Photo+Video</p>
+                           <p>RVs+Camp</p>
+                           <p>Sporting</p>
+                           <p>Tickets</p>     
+                           <p>Toys+Games</p>
+                           <p>Video Gaming</p>
+                           <p>Wanted</p>
+                                </div>
+                        </div>
+                    </div>
+                   
+                    <div class="topic">
+                        <button class="topic-button">Personals</button>
+                        <div class="subtopics closed">
+                          <div>
+                            <p>Strictly Platonic</p>
+                           <p>Women Seeking Women</p>
+                           <p>Women Seeking Men</p>
+                           <p>Men Seeking Women</p>
+                           <p>Men Seeking Men</p>     
+                           <p>Misc Romance</p>
+                           <p>Casual Encounters</p>
+                           <p>Missed Connections</p>
+                           <p>Rants+Raves</p>
+                        </div>
+                    </div>
+                   
+                    <div class="topic">
+                        <button class="topic-button">Gigs</button>
+                        <div class="subtopics closed">
+                            <div> 
+                            <p>Computer</p>
+                           <p>Creative</p>
+                           <p>Crew</p>
+                           <p>Domestic</p>
+                           <p>Event</p>     
+                           <p>Labor</p>
+                           <p>Talent</p>
+                           <p>Writing</p>
+                        </div>
+                    </div>
+                   
+                    <div class="topic">
+                        <button class="topic-button">Nearby</button>
+                        <div class="subtopics closed">
+                            <div><p>List nearby cities...</p></div>
+                        </div>
+                    </div>
+                </div>
+             
+            </div>    
+              
+        </div>
+            </main>
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="help.html">Help</a> <a href="terms.html">Terms</a> <a href=
+            "mobile.html">Mobile</a> <a href="clhome.html">About</a> <a href=
+            "safety.html">Safety</a> <a href="privacy.html">Privacy</a> <a href=
+            "jobs.html">Jobs</a> <a href="clcontact.html">Contact</a>
+        </div>
+        <div class="copyright">
+            Copyright &#169; 2016 Craigslist
+        </div>
+    </footer>
+    <script src="script.js" type="text/javascript">
+    </script>
+        <script src="calender.js" type="text/javascript">
+    </script>
+</body>
+</html>
